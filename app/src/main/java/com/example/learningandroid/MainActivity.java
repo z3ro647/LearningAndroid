@@ -17,9 +17,9 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         txtCounter = findViewById(R.id.txt_counter);
-        btnPlus = findViewById(R.id.plus);
-        btnMinus = findViewById(R.id.minus);
-        btnReset = findViewById(R.id.reset);
+        btnPlus = findViewById(R.id.btnPlus);
+        btnMinus = findViewById(R.id.btnMinus);
+        btnReset = findViewById(R.id.btnReset);
 
 //        btnPlus.setOnClickListener(new View.OnClickListener() {
 //            @Override
@@ -47,13 +47,13 @@ public class MainActivity extends AppCompatActivity {
 //        });
     }
 
-    public void plusFunction(View view) {
+    public void plusFunction(View v) {
         int counter = Integer.parseInt(txtCounter.getText().toString());
         counter++;
         txtCounter.setText(counter+"");
     }
 
-    public void minusFunction(View view) {
+    public void minusFunction(View v) {
         int counter = Integer.parseInt(txtCounter.getText().toString());
         if (counter!=0){
             counter--;
@@ -61,7 +61,29 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
-    public void resetFunction(View view) {
+    public void resetFunction(View v) {
         txtCounter.setText("0");
+    }
+
+    public void operation(View v) {
+        int id = v.getId();
+        int counter = 0;
+        switch (id) {
+            case R.id.btnPlus:
+                counter = Integer.parseInt(txtCounter.getText().toString());
+                counter++;
+                txtCounter.setText(counter+"");
+                break;
+            case R.id.btnMinus:
+                counter = Integer.parseInt(txtCounter.getText().toString());
+                if (counter!=0){
+                    counter--;
+                    txtCounter.setText(counter+"");
+                }
+                break;
+            case R.id.btnReset:
+                txtCounter.setText("0");
+                break;
+        }
     }
 }

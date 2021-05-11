@@ -17,36 +17,36 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/plus"
+        android:id="@+id/btnPlus"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="32dp"
         android:text="@string/plus"
-        android:onClick="plusFunction"
+        android:onClick="operation"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txt_counter" />
 
     <Button
-        android:id="@+id/minus"
+        android:id="@+id/btnMinus"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/minus"
-        android:onClick="minusFunction"
+        android:onClick="operation"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/plus" />
+        app:layout_constraintTop_toBottomOf="@+id/btnPlus" />
 
     <Button
-        android:id="@+id/reset"
+        android:id="@+id/btnReset"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="32dp"
         android:text="@string/reset"
-        android:onClick="resetFunction"
+        android:onClick="operation"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.15"
-        app:layout_constraintStart_toEndOf="@+id/plus"
+        app:layout_constraintStart_toEndOf="@+id/btnPlus"
         app:layout_constraintTop_toBottomOf="@+id/txt_counter" />
 
 </android.support.constraint.ConstraintLayout>
