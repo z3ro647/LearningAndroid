@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">Learning Android</string>
+    <string name="counter">0</string>
+    <string name="plus">Plus</string>
+    <string name="minus">Minus</string>
+    <string name="reset">Reset</string>
 </resources>
