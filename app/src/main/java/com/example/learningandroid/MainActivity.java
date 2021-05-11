@@ -6,7 +6,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
     private TextView txtCounter;
     private Button btnPlus, btnMinus, btnReset;
@@ -20,6 +20,10 @@ public class MainActivity extends AppCompatActivity {
         btnPlus = findViewById(R.id.btnPlus);
         btnMinus = findViewById(R.id.btnMinus);
         btnReset = findViewById(R.id.btnReset);
+
+        btnPlus.setOnClickListener(this);
+        btnMinus.setOnClickListener(this);
+        btnReset.setOnClickListener(this);
 
 //        btnPlus.setOnClickListener(new View.OnClickListener() {
 //            @Override
@@ -65,7 +69,30 @@ public class MainActivity extends AppCompatActivity {
         txtCounter.setText("0");
     }
 
-    public void operation(View v) {
+//    public void operation(View v) {
+//        int id = v.getId();
+//        int counter = 0;
+//        switch (id) {
+//            case R.id.btnPlus:
+//                counter = Integer.parseInt(txtCounter.getText().toString());
+//                counter++;
+//                txtCounter.setText(counter+"");
+//                break;
+//            case R.id.btnMinus:
+//                counter = Integer.parseInt(txtCounter.getText().toString());
+//                if (counter!=0){
+//                    counter--;
+//                    txtCounter.setText(counter+"");
+//                }
+//                break;
+//            case R.id.btnReset:
+//                txtCounter.setText("0");
+//                break;
+//        }
+//    }
+
+    @Override
+    public void onClick(View v) {
         int id = v.getId();
         int counter = 0;
         switch (id) {
