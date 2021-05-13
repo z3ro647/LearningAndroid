@@ -4,4 +4,6 @@
     <string name="plus">Plus</string>
     <string name="minus">Minus</string>
     <string name="reset">Reset</string>
+    <string name="hide_show">Hide/Show</string>
+    <string name="meme_description">Luffy Meme</string>
 </resources>
