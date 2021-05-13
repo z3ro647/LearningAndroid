@@ -1,5 +1,6 @@
 package com.example.learningandroid;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
@@ -7,20 +8,15 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
-import android.widget.Toast;
 
 public class ListViewActivity extends AppCompatActivity {
 
     private ListView listView;
     private String [] options = {
-            "A",
-            "B",
+            "Introduction",
+            "My Bio App - Relative Layout",
             "C",
             "D",
-            "A 1",
-            "B 2",
-            "C 3",
-            "D 4",
     };
 
     @Override
@@ -35,7 +31,18 @@ public class ListViewActivity extends AppCompatActivity {
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                Toast.makeText(ListViewActivity.this, options[position], Toast.LENGTH_SHORT).show();
+                //Toast.makeText(ListViewActivity.this, options[position], Toast.LENGTH_SHORT).show();
+                Intent intent;
+                switch (position){
+                    case 0:
+                        intent = new Intent(ListViewActivity.this, MainActivity.class);
+                        startActivity(intent);
+                        break;
+                    case 1:
+                        intent = new Intent(ListViewActivity.this, MyBioRelativeLayout.class);
+                        startActivity(intent);
+                        break;
+                }
             }
         });
     }

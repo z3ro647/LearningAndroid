@@ -6,4 +6,10 @@
     <string name="reset">Reset</string>
     <string name="hide_show">Hide/Show</string>
     <string name="meme_description">Luffy Meme</string>
+    <string name="enterData">Enter Your Data</string>
+    <string name="enterName">Enter your Name</string>
+    <string name="enterPhone">Enter your Phone</string>
+    <string name="enterEmail">Enter your Email</string>
+    <string name="enterAddress">Enter your Address</string>
+    <string name="enter">Enter</string>
 </resources>
