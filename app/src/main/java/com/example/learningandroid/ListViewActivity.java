@@ -15,7 +15,7 @@ public class ListViewActivity extends AppCompatActivity {
     private String [] options = {
             "Introduction",
             "My Bio App - Relative Layout",
-            "C",
+            "My Bio App - Linear Layout",
             "D",
     };
 
@@ -40,6 +40,10 @@ public class ListViewActivity extends AppCompatActivity {
                         break;
                     case 1:
                         intent = new Intent(ListViewActivity.this, MyBioRelativeLayout.class);
+                        startActivity(intent);
+                        break;
+                    case 2:
+                        intent = new Intent(ListViewActivity.this, MyBioLinearLayout.class);
                         startActivity(intent);
                         break;
                 }
