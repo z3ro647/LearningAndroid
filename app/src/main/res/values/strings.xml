@@ -10,6 +10,11 @@
     <string name="enterName">Enter your Name</string>
     <string name="enterPhone">Enter your Phone</string>
     <string name="enterEmail">Enter your Email</string>
+    <string name="enterPassword">Enter your Password</string>
     <string name="enterAddress">Enter your Address</string>
     <string name="enter">Enter</string>
+    <string name="loginForm">Login Form</string>
+    <string name="signUp">Sign Up</string>
+    <string name="login">Log In</string>
+    <string name="noAcc">No Account Yet?</string>
 </resources>
