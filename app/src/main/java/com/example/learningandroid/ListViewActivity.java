@@ -17,7 +17,8 @@ public class ListViewActivity extends AppCompatActivity {
             "My Bio App - Relative Layout",
             "My Bio App - Linear Layout",
             "Login Form - Constraint Layout",
-            "Dice App"
+            "Dice App",
+            "SMS App"
     };
 
     @Override
@@ -52,6 +53,9 @@ public class ListViewActivity extends AppCompatActivity {
                         startActivity(intent);
                     case 4:
                         intent = new Intent(ListViewActivity.this, DiceActivity.class);
+                        startActivity(intent);
+                    case 5:
+                        intent = new Intent(ListViewActivity.this, SmsActivity.class);
                         startActivity(intent);
                 }
             }
