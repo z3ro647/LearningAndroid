@@ -7,7 +7,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 
-public class MyBioLinearLayout extends AppCompatActivity {
+public class ProfileActivity extends AppCompatActivity {
 
     private EditText edtPhone, edtName, edtEmail, edtAddress;
     private Button btnSend;
@@ -15,23 +15,28 @@ public class MyBioLinearLayout extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_my_bio_linear_layout);
+        setContentView(R.layout.activity_profile);
 
         edtPhone = findViewById(R.id.edit_Phone);
         edtName = findViewById(R.id.edit_name);
         edtEmail = findViewById(R.id.edit_email);
         edtAddress = findViewById(R.id.edit_address);
-        btnSend = findViewById(R.id.btn_send);
+        btnSend = findViewById(R.id.btn_return);
+
+        String name = getIntent().getStringExtra("nameKey");
+        String email = getIntent().getStringExtra("emailKey");
+        String phone = getIntent().getStringExtra("phoneKey");
+        String address = getIntent().getStringExtra("addressKey");
+
+        edtPhone.setText(phone);
+        edtAddress.setText(address);
+        edtName.setText(name);
+        edtEmail.setText(email);
 
         btnSend.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(MyBioLinearLayout.this, ProfileActivity.class);
-                intent.putExtra("nameKey", edtName.getText().toString());
-                intent.putExtra("phoneKey", edtPhone.getText().toString());
-                intent.putExtra("emailKey", edtEmail.getText().toString());
-                intent.putExtra("addressKey", edtAddress.getText().toString());
-                startActivity(intent);
+                startActivity(new Intent(ProfileActivity.this, ListViewActivity.class));
             }
         });
     }
